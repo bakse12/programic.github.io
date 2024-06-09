@@ -1,0 +1,51 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-frame {
+    width: 375px; /* Ширина типичного мобильного устройства */
+    height: 667px; /* Высота типичного мобильного устройства */
+    border: 1px solid #ccc; /* Для демонстрации границ контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Легкая тень */
+}
+
+/* Медиа-запросы для разных размеров экранов */
+@media (max-width: 767px) {
+    .phone-frame {
+        width: 320px; /* Ширина для небольших экранов */
+        height: 568px; /* Высота для небольших экранов */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .phone-frame {
+        width: 414px; /* Ширина для планшетов в портретной ориентации */
+        height: 736px; /* Высота для планшетов в портретной ориентации */
+    }
+}
+
+@media (min-width: 1025px) {
+    .phone-frame {
+        width: 768px; /* Ширина для планшетов в ландшафтной ориентации */
+        height: 1024px; /* Высота для планшетов в ландшафтной ориентации */
+    }
+}
